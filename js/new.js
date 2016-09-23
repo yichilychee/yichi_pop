@@ -18,6 +18,17 @@ $(document).ready(function(){
     for(i=0;i<curPage;i++) navigateUp();
   });
 
+  $('#fullpage').fullpage({
+    keyboard: false,
+    anchors: ['firstPage', 'secondPage'],
+    navigation: false,
+    // navigationPosition: 'right',
+    // navigationTooltips: ['First page', 'Second page'],
+    responsiveWidth: 900,
+    afterResponsive: function(isResponsive) {
+
+    }
+  });
 
   function pagination() {
     scrolling = true;
@@ -43,7 +54,8 @@ $(document).ready(function(){
     pagination();
   };
 
-  $(document).on("mousewheel DOMMouseScroll", function(e) {
+  $(".modal").on("mousewheel DOMMouseScroll", function(e) {
+    event.stopPropagation();
     if (scrolling) return;
     if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
       navigateUp();
@@ -52,27 +64,27 @@ $(document).ready(function(){
     }
   });
 
-  $(document).on("keydown", function(e) {
+  $(".modal").on("keydown", function(e) {
+    event.stopPropagation();
+    console.log(e);
     if (scrolling) return;
     if (e.which === 38) {
-      navigateUp();
+      if($(".modal-open").length>0){
+        navigateUp();
+      }else{
+        $('#fullpage').moveUp();
+      }
+      
     } else if (e.which === 40) {
-      navigateDown();
+      if($(".modal-open").length>0){
+        navigateDown();
+      }else{
+        $('#fullpage').moveDown();
+      }
     }
   });
 
-  $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage'],
-        
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['First page', 'Second page'],
-        responsiveWidth: 900,
-        afterResponsive: function(isResponsive){
-          
-        }
-
-      });
+  
 });
 
 

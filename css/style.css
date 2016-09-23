@@ -23,9 +23,10 @@ div.video {
   left: 0;
   visibility: visible;
 }
-.modal-dialog{
+.modal .modal-dialog{
     width: 100%;
     height:500px;
+    margin: 0 auto;
   }
 .modal-backdrop{
   z-index: 1;
