@@ -205,18 +205,6 @@ body {
   background: #292929;
 }
 
-.intro p{
-    color: black;
-  }
-
-  /* Centered texts in each section
-  * --------------------------------------- */
-  .section{
-    text-align:center;
-  }
-
-  /* Bottom menu
-  * --------------------------------------- */
-  #infoMenu li a {
-    color: #fff;
-  }
+section{
+  height: 500px;
+}

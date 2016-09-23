@@ -61,19 +61,11 @@ $(document).ready(function(){
     }
   });
 
-  $('#fullpage').fullpage({
-        anchors: ['firstPage', 'secondPage'],
-        
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['First page', 'Second page'],
-        responsiveWidth: 900,
-        afterResponsive: function(isResponsive){
-          
-        }
-
-      });
+  
 });
 
+$(".main").onepage_scroll({
+  loop: false
+});
 
 
