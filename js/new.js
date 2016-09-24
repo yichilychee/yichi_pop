@@ -27,6 +27,10 @@ $(document).ready(function(){
     responsiveWidth: 900,
     afterResponsive: function(isResponsive) {
 
+    },
+    afterRender: function () {
+      //playing the video
+      $('video.bgvid').get(0).play();
     }
   });
 
