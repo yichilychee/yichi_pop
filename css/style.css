@@ -221,3 +221,71 @@ body {
   #infoMenu li a {
     color: #fff;
   }
+
+/*
+video {
+    min-width: 100%;
+    height: auto;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+h1 {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+
+
+@media screen and (min-width: 720px) {
+  :root {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 960px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: 18px;
+  }
+}*/
+
+.bgvid {
+  position: relative;
+  min-width: 100%;
+  
+  width: auto;
+  height: auto;
+  background-size: cover;
+}
+
+.page-header {
+  font-size: 1.125rem;
+  position: absolute;
+  text-align: left;
+  bottom: 5em;
+  left: 5em;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 1em 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.9);
+  mix-blend-mode: multiply;
+}
