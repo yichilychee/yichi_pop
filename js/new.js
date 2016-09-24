@@ -10,13 +10,15 @@ $(document).ready(function(){
   var pgPrefix = ".skw-page-";
   
   $('.portfolio-item').on('click', function(){
+        console.log("show");
         $('.modal').modal("show");
     });
   
-  $('.modal .modal-backdrop').on('click', function(){
-    $('.modal').removeClass('open');
-    for(i=0;i<curPage;i++) navigateUp();
-  });
+  $(".cancel").click(function(){
+        console.log("cancel");
+        $(".Modal").modal("hide");
+    });
+
 
   $('#fullpage').fullpage({
     keyboard: false,
